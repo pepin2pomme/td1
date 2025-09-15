@@ -1,6 +1,7 @@
-console.log("hello world")
-console.log("hello feur")
+document.body.innerHTML += "Hello world !<br>";
 
-function bouton1(){
-    alert("feur");
-}
+let celcius = 22;
+let fahrenheit = celcius * 9/5 + 32
+
+document.body.innerHTML += "Celcius: " + celcius + " = Fahrenheit: " + fahrenheit + "<br>";
+
