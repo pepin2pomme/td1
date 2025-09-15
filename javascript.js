@@ -23,6 +23,9 @@ for (let i = 0; i < 3; i++) {
     document.getElementById("statutSite").textContent = "Dans boucle, bouton="+pfc[i];
     
     document.getElementById("btn"+i).addEventListener("click", function (){
+        document.getElementById("affichageJoueur").textContent= pfc[i];
+        let ordi = Math.floor(Math.random() * 3);
+        document.getElementById("affichageOrdi").textContent= pfc[ordi];
 
     })
 
