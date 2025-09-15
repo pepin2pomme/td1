@@ -1,3 +1,4 @@
+/*
 document.body.innerHTML += "Hello world !<br>";
 
 let celcius = 22;
@@ -9,3 +10,5 @@ let longueur = 10;
 let largeur = 5;
 let aire = longueur*largeur;
 document.body.innerHTML += "Longueur = " + longueur + "; Largeur = " + largeur +"; Aire du rectangle = " + aire;
+*/
+
