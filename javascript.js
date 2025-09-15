@@ -11,29 +11,60 @@ let largeur = 5;
 let aire = longueur*largeur;
 document.body.innerHTML += "Longueur = " + longueur + "; Largeur = " + largeur +"; Aire du rectangle = " + aire;
 */
-
+document.getElementById("statutSite").textContent = "Debut initialisation";
 
 let ptsJoueur =0;
 let ptsOrdi = 0;
 let egalite = 0;
 
-let statutRound = 0;
+let pfc = ["Pierre", "Feuille", "Ciseaux"];
 
+for (let i = 0; i < 3; i++) {
+    document.getElementById("statutSite").textContent = "Dans boucle, bouton="+pfc[i];
+    
+    document.getElementById("btn"+i).addEventListener("click", function (){
+
+    })
+
+}
+
+
+document.getElementById("statutSite").textContent = "Fin initialisation";
+
+/*
 function miseajour(statutRound){
+    document.body.innerHTML += "<br>mise à jour...";
+
+    if(statutRound == "egalite"){
+        egalite ++;
+        document.getElementById("scoreEgalite").textContent = egalite;
+        document.body.innerHTML += "<br>Score mis à jour";
+    }
 
 }
 
 document.getElementById("boutonPierre").addEventListener("click", function () {
+    document.getElementById("affichageJoueur").textContent= "pierre";
     let ordi = Math.floor(Math.random() * 3);
-    if (ordi == 0) {egalite += 1;} else if (ordi == 1) {ptsOrdi += 1;} else {ptsJoueur += 1;}
+    document.getElementById("affichageOrdi").textContent= ordi;
+    
+    if (ordi == 0) {miseajour("egalite")} else if (ordi == 1) {miseajour("defaite")} else {miseajour("victoire")}
+    
 });
 
 document.getElementById("bontonFeuille").addEventListener("click", function () {
-    let ordi = Math.floor(Math.random() * 3);
-    if (ordi == 1) {egalite += 1;} else if (ordi == 2) {ptsOrdi += 1;} else {ptsJoueur += 0;}
+    document.getElementById("affichageJoueur").textContent= "feuille";
+    let ordi = Math.floor(Math.random() * 3)
+    document.getElementById("affichageOrdi").textContent= ordi;
 });
 
 document.getElementById("boutonCiseaux").addEventListener("click", function () {
+    document.getElementById("affichageJoueur").textContent= "ciseaux";
     let ordi = Math.floor(Math.random() * 3);
-    if (ordi == 2) {egalite += 1;} else if (ordi == 0) {ptsOrdi += 1;} else {ptsJoueur += 1;}
+    document.getElementById("affichageOrdi").textContent= ordi;
 });
+
+*/
+
+
+
