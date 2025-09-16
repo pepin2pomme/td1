@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shifumi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Shifumi</h1>
-
-    <p>Statut : <span id="statutSite">x</span></p>
+    <div id="titre">
+        <h1 class="notable-regular">Shifumi</h1>
+    </div>
     
-    <div id="boutons">
-        <button id="btn0">🪨</button>
-        <button id="btn1">📃</button>
-        <button id="btn2">✂️</button>
+    <div id="divBoutons">
+        <button class="btnpfc" id="btn0">🪨</button>
+        <button class="btnpfc" id="btn1">📃</button>
+        <button class="btnpfc" id="btn2">✂️</button>
     </div>
 
     <div id ="round">
@@ -31,9 +35,11 @@
     <div id="boutonsBottom">
         <button onclick="reset()">Réinitialiser</button>
         <a href="index.html">
-            <button>Retourner à l'accueil</button>
+            <button>Accueil</button>
         </a>
     </div>
+
+    <p id="statut">Statut : <span id="statutSite">x</span></p>
     
 </body>
 

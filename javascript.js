@@ -1,4 +1,4 @@
-//document.getElementById("statutSite").textContent = "Debut initialisation";
+document.getElementById("statutSite").textContent = "Debut initialisation";
 
 let victoires = 0;
 let defaites = 0;
@@ -32,6 +32,9 @@ function reset(){
     location.reload();
 }
 
+
+
+
 for (let i = 0; i < 3; i++) {
     document.getElementById("statutSite").textContent = "Dans boucle, bouton="+pfc[i];
     
@@ -45,4 +48,4 @@ for (let i = 0; i < 3; i++) {
 
 }
 
-//document.getElementById("statutSite").textContent = "Fin initialisation";
+document.getElementById("statutSite").textContent = "Fin initialisation";
