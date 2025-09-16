@@ -1,23 +1,36 @@
-/*
-document.body.innerHTML += "Hello world !<br>";
+//document.getElementById("statutSite").textContent = "Debut initialisation";
 
-let celcius = 22;
-let fahrenheit = celcius * 9/5 + 32
-
-document.body.innerHTML += "Celcius: " + celcius + " = Fahrenheit: " + fahrenheit + "<br>";
-
-let longueur = 10;
-let largeur = 5;
-let aire = longueur*largeur;
-document.body.innerHTML += "Longueur = " + longueur + "; Largeur = " + largeur +"; Aire du rectangle = " + aire;
-*/
-document.getElementById("statutSite").textContent = "Debut initialisation";
-
-let ptsJoueur =0;
-let ptsOrdi = 0;
+let victoires = 0;
+let defaites = 0;
 let egalite = 0;
+const pfc = ["Pierre", "Feuille", "Ciseaux"];
 
-let pfc = ["Pierre", "Feuille", "Ciseaux"];
+function comparer(joueur, ordi){
+    if((joueur == 0 && ordi == 2) || (joueur == 1 && ordi == 0) || (joueur == 2 && ordi == 1)){
+        update("Joueur");
+    } else if(joueur == ordi){
+        update("Egalité");
+    } else {
+        update("Ordinateur");
+    }
+}
+
+function update(result){
+
+    document.getElementById("affichageGagnant").textContent = result;
+
+    if(result == "Joueur"){
+        victoires++; document.getElementById("scoreJoueur").textContent = victoires;
+    } else if (result == "Ordinateur"){
+        defaites++; document.getElementById("scoreDefaite").textContent = defaites;
+    } else {
+        egalite++; document.getElementById("scoreEgalite").textContent = egalite;
+    }
+}
+
+function reset(){
+    location.reload();
+}
 
 for (let i = 0; i < 3; i++) {
     document.getElementById("statutSite").textContent = "Dans boucle, bouton="+pfc[i];
@@ -27,47 +40,9 @@ for (let i = 0; i < 3; i++) {
         let ordi = Math.floor(Math.random() * 3);
         document.getElementById("affichageOrdi").textContent= pfc[ordi];
 
+        comparer(i, ordi);
     })
 
 }
 
-
-document.getElementById("statutSite").textContent = "Fin initialisation";
-
-/*
-function miseajour(statutRound){
-    document.body.innerHTML += "<br>mise à jour...";
-
-    if(statutRound == "egalite"){
-        egalite ++;
-        document.getElementById("scoreEgalite").textContent = egalite;
-        document.body.innerHTML += "<br>Score mis à jour";
-    }
-
-}
-
-document.getElementById("boutonPierre").addEventListener("click", function () {
-    document.getElementById("affichageJoueur").textContent= "pierre";
-    let ordi = Math.floor(Math.random() * 3);
-    document.getElementById("affichageOrdi").textContent= ordi;
-    
-    if (ordi == 0) {miseajour("egalite")} else if (ordi == 1) {miseajour("defaite")} else {miseajour("victoire")}
-    
-});
-
-document.getElementById("bontonFeuille").addEventListener("click", function () {
-    document.getElementById("affichageJoueur").textContent= "feuille";
-    let ordi = Math.floor(Math.random() * 3)
-    document.getElementById("affichageOrdi").textContent= ordi;
-});
-
-document.getElementById("boutonCiseaux").addEventListener("click", function () {
-    document.getElementById("affichageJoueur").textContent= "ciseaux";
-    let ordi = Math.floor(Math.random() * 3);
-    document.getElementById("affichageOrdi").textContent= ordi;
-});
-
-*/
-
-
-
+//document.getElementById("statutSite").textContent = "Fin initialisation";
